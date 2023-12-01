@@ -6,6 +6,8 @@
         overflow-y: auto;
     }
 </style>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
 @endpush
 @section('content')
     <div class="row">
@@ -48,36 +50,35 @@
                     @forelse ($employee_timesheet as $key => $row)
 
                         @if(isset($row->details))
-
-                        @forelse ($row->details as $k => $value)
-                            <tr>
-                                <td>{{ $row->employee_name }}</td>
-                                <td>{{ $row->employer_name }}</td>
-                                <td>{{ $row->pay_period_from }}</td>
-                                <td>{{ $row->pay_period_to }}</td>
-                                <td>{{ $row->pay_date }}</td>
-                                <td class="text-center">{{ $value->day ?? ''}} </td>
-                                <td class="text-center">{{ $value->date ?? ''}} </td>
-                                <td class="text-center">{{ $value->start_time ?? ''}} </td>
-                                <td class="text-center">{{ $value->start_time_of_unpaid_break ?? ''}} </td>
-                                <td class="text-center">{{ $value->restart_time ?? ''}} </td>
-                                <td class="text-center">{{ $value->finish_time ?? ''}} </td>
-                                <td class="text-center">{{ $value->other_time_of_unpaid_break ?? ''}} </td>
-                                <td class="text-center">{{ $value->total_break_time ?? ''}} </td>
-                                <td class="text-center">{{ $value->overtime_start_time ?? ''}} </td>
-                                <td class="text-center">{{ $value->overtime_start_time_of_unpaid_break ?? ''}} </td>
-                                <td class="text-center">{{ $value->overtime_restart_time ?? ''}} </td>
-                                <td class="text-center">{{ $value->overtime_finish_time ?? ''}} </td>
-                                <td class="text-center">{{ $value->overtime_total_break_time ?? ''}} </td>
-                                <td class="text-center">{{ $value->leave_type ?? ''}} </td>
-                                <td class="text-center">{{ $value->leave_hours_minute_unpaid_break ?? ''}} </td>
-                                <td>{{ $row->created_at }}</td>
-                                {{-- <td>
-                                    <button type="button" class="btn btn-primary view-employee-details" data-value="{{ $row->id }}"><i class="far fa-eye"></i></button>
-                                </td> --}}
-                            </tr>
-                        @empty
-                        @endforelse
+                            @forelse ($row->details as $k => $value)
+                                <tr>
+                                    <td>{{ $row->employee_name }}</td>
+                                    <td>{{ $row->employer_name }}</td>
+                                    <td>{{ $row->pay_period_from }}</td>
+                                    <td>{{ $row->pay_period_to }}</td>
+                                    <td>{{ $row->pay_date }}</td>
+                                    <td class="text-center">{{ $value->day ?? ''}} </td>
+                                    <td class="text-center">{{ $value->date ?? ''}} </td>
+                                    <td class="text-center">{{ $value->start_time ?? ''}} </td>
+                                    <td class="text-center">{{ $value->start_time_of_unpaid_break ?? ''}} </td>
+                                    <td class="text-center">{{ $value->restart_time ?? ''}} </td>
+                                    <td class="text-center">{{ $value->finish_time ?? ''}} </td>
+                                    <td class="text-center">{{ $value->other_time_of_unpaid_break ?? ''}} </td>
+                                    <td class="text-center">{{ $value->total_break_time ?? ''}} </td>
+                                    <td class="text-center">{{ $value->overtime_start_time ?? ''}} </td>
+                                    <td class="text-center">{{ $value->overtime_start_time_of_unpaid_break ?? ''}} </td>
+                                    <td class="text-center">{{ $value->overtime_restart_time ?? ''}} </td>
+                                    <td class="text-center">{{ $value->overtime_finish_time ?? ''}} </td>
+                                    <td class="text-center">{{ $value->overtime_total_break_time ?? ''}} </td>
+                                    <td class="text-center">{{ $value->leave_type ?? ''}} </td>
+                                    <td class="text-center">{{ $value->leave_hours_minute_unpaid_break ?? ''}} </td>
+                                    <td>{{ $row->created_at }}</td>
+                                    {{-- <td>
+                                        <button type="button" class="btn btn-primary view-employee-details" data-value="{{ $row->id }}"><i class="far fa-eye"></i></button>
+                                    </td> --}}
+                                </tr>
+                            @empty
+                            @endforelse
                         @endif
                     @empty
                     @endforelse
@@ -106,8 +107,23 @@
     </div>
 @endsection
 @push('after-scripts')
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+
 <script>
-    $('#example').DataTable();
+    $('#example').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            // 'copyHtml5',
+            // 'excelHtml5',
+            'csvHtml5',
+            // 'pdfHtml5'
+        ]
+    });
 
     $(document).on('click','.view-employee-details',function(){
         var employeeTimeSheetID = $(this).attr('data-value');

@@ -12,28 +12,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 
         <!-- plugin scripts -->
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/animate.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/swiper.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/bootstrap-select.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/tripo-icons.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/jquery.mCustomScrollbar.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/bootstrap-datepicker.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/vegas.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/nouislider.min.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/nouislider.pips.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/skysphere-style.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/animate.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/swiper.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/tripo-icons.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/vegas.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/nouislider.min.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/nouislider.pips.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/skysphere-style.css">
 
         <!-- phone number flage styles -->
-        <link rel="stylesheet" href="{{ url('/') }}/assets/build/css/intlTelInput.css" />
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/build/css/intlTelInput.css" />
         
         <!-- template styles -->
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/style.css">
-        <link rel="stylesheet" href="{{ url('/') }}/assets/css/responsive.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/style.css">
+        <link rel="stylesheet" href="{{ url('/') }}/public/assets/css/responsive.css">
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 
@@ -345,27 +345,27 @@
         </div>
 
         <!-- /.page-wrapper -->
-        <script src="{{ url('/') }}/assets/js/jquery.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/bootstrap.bundle.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/owl.carousel.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/waypoints.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/jquery.counterup.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/TweenMax.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/wow.js"></script>
-        <script src="{{ url('/') }}/assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/jquery.ajaxchimp.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/swiper.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/typed-2.0.11.js"></script>
-        <script src="{{ url('/') }}/assets/js/vegas.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/jquery.validate.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/bootstrap-select.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/countdown.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/bootstrap-datepicker.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/nouislider.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/isotope.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/jquery.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/owl.carousel.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/waypoints.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/jquery.counterup.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/TweenMax.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/wow.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/swiper.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/typed-2.0.11.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/vegas.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/jquery.validate.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/bootstrap-select.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/countdown.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/bootstrap-datepicker.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/nouislider.min.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/isotope.js"></script>
         <!-- template scripts -->
-        <script src="{{ url('/') }}/assets/js/theme.js"></script>
+        <script src="{{ url('/') }}/public/assets/js/theme.js"></script>
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 
@@ -414,11 +414,11 @@
                         "finish_time[]" : "required",
                         "other_time_of_unpaid_break[]" : "required",
                         "total_break_time[]" : "required",
-                        "overtime_start_time[]" : "required",
-                        "overtime_start_time_of_unpaid_break[]" : "required",
-                        "overtime_restart_time[]" : "required",
-                        "overtime_finish_time[]" : "required",
-                        "overtime_total_break_time[]" : "required",
+                        // "overtime_start_time[]" : "required",
+                        // "overtime_start_time_of_unpaid_break[]" : "required",
+                        // "overtime_restart_time[]" : "required",
+                        // "overtime_finish_time[]" : "required",
+                        // "overtime_total_break_time[]" : "required",
                         "leave_type[]" : "required",
                         "leave_hours_minute_unpaid_break[]" : "required",
                     }
