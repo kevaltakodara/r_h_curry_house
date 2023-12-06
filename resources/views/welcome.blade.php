@@ -135,7 +135,8 @@
                                                 <div class="input-group">
                                                     <label class="col-sm-12 col-form-label">Day</label>
                                                     <div class="col-md-12">
-                                                        <select id="inputState" name="day[]" class="form-control">
+                                                        <input type="text" name="day[]">
+                                                        {{-- <select id="inputState" name="day[]" class="form-control">
                                                             <option value="">Choose Day</option>
                                                             <option value="Monday">Monday</option>
                                                             <option value="Thesday">Thesday</option>
@@ -144,7 +145,7 @@
                                                             <option value="Friday">Friday</option>
                                                             <option value="Saturday">Saturday</option>
                                                             <option value="Sunday">Sunday</option>
-                                                        </select>
+                                                        </select> --}}
                                                     </div><!-- /.input-group -->
                                             </div><!-- /.col-md-6 -->
                                             </div>
@@ -224,95 +225,107 @@
                                             </div>
                                         </div>
                                     </div>
-                                
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="table-header mt-50">
-                                                <h4>Overtime</h4>
+                                    <div class="overtime-leave-section">
+                                        <div class="row mt-25">
+                                            <div class="col-md-12">
+                                                <div class="input-group justify-content-left">
+                                                    <button type="button" class="thm-btn fill-btn black overtime-btn mr-10">Overtime</button>
+                                                    <button type="button" class="thm-btn fill-btn black leave-btn">Leave</button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group row mb-0">
-                                                <div class="input-group">
-                                                    <label class="col-sm-12 col-form-label">Start Time</label>
-                                                    <div class="col-md-12">
-                                                        <input type="text" class="timepicker" name="overtime_start_time[]" placeholder="Ex: 8:30am">
-                                                    </div><!-- /.input-group -->
-                                            </div><!-- /.col-md-6 -->
+                                        <div class="overtime-block" style="display: none;">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="table-header mt-50">
+                                                        <h4>Overtime</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group row mb-0">
+                                                        <div class="input-group">
+                                                            <label class="col-sm-12 col-form-label">Start Time</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" class="timepicker" name="overtime_start_time[]" placeholder="Ex: 8:30am">
+                                                            </div><!-- /.input-group -->
+                                                    </div><!-- /.col-md-6 -->
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row mb-0">
+                                                        <div class="input-group">
+                                                            <label class="col-sm-12 col-form-label">Start Time of unpaid break</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" class="timepicker" name="overtime_start_time_of_unpaid_break[]" placeholder="Ex: 12:30pm">
+                                                            </div><!-- /.input-group -->
+                                                    </div><!-- /.col-md-6 -->
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row mb-0">
+                                                        <div class="input-group">
+                                                            <label class="col-sm-12 col-form-label">Restart time</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" class="timepicker" name="overtime_restart_time[]" placeholder="Ex: 1:30pm">
+                                                            </div><!-- /.input-group -->
+                                                    </div><!-- /.col-md-6 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group row mb-0">
+                                                        <div class="input-group">
+                                                            <label class="col-sm-12 col-form-label">Finish Time</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" class="timepicker" name="overtime_finish_time[]" placeholder="Ex: 5:00pm">
+                                                            </div><!-- /.input-group -->
+                                                    </div><!-- /.col-md-6 -->
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row mb-0">
+                                                        <div class="input-group">
+                                                            <label class="col-sm-12 col-form-label">Total break time</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" class="timepicker" name="overtime_total_break_time[]" placeholder="Ex: 2:30pm">
+                                                            </div><!-- /.input-group -->
+                                                    </div><!-- /.col-md-6 -->
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group row mb-0">
-                                                <div class="input-group">
-                                                    <label class="col-sm-12 col-form-label">Start Time of unpaid break</label>
-                                                    <div class="col-md-12">
-                                                        <input type="text" class="timepicker" name="overtime_start_time_of_unpaid_break[]" placeholder="Ex: 12:30pm">
-                                                    </div><!-- /.input-group -->
-                                            </div><!-- /.col-md-6 -->
+                                        <div class="leave-block" style="display: none;">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="table-header mt-50">
+                                                        <h4>Leave</h4>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group row mb-0">
-                                                <div class="input-group">
-                                                    <label class="col-sm-12 col-form-label">Restart time</label>
-                                                    <div class="col-md-12">
-                                                        <input type="text" class="timepicker" name="overtime_restart_time[]" placeholder="Ex: 1:30pm">
-                                                    </div><!-- /.input-group -->
-                                            </div><!-- /.col-md-6 -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group row mb-0">
-                                                <div class="input-group">
-                                                    <label class="col-sm-12 col-form-label">Finish Time</label>
-                                                    <div class="col-md-12">
-                                                        <input type="text" class="timepicker" name="overtime_finish_time[]" placeholder="Ex: 5:00pm">
-                                                    </div><!-- /.input-group -->
-                                            </div><!-- /.col-md-6 -->
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group row mb-0">
-                                                <div class="input-group">
-                                                    <label class="col-sm-12 col-form-label">Total break time</label>
-                                                    <div class="col-md-12">
-                                                        <input type="text" class="timepicker" name="overtime_total_break_time[]" placeholder="Ex: 2:30pm">
-                                                    </div><!-- /.input-group -->
-                                            </div><!-- /.col-md-6 -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="table-header mt-50">
-                                                <h4>Leave</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group row mb-0">
-                                                <div class="input-group">
-                                                    <label class="col-sm-12 col-form-label">Type</label>
-                                                    <div class="col-md-12">
-                                                        <input type="text" name="leave_type[]" placeholder="Ex: Personal Leave, Etc">
-                                                    </div><!-- /.input-group -->
-                                            </div><!-- /.col-md-6 -->
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group row mb-0">
-                                                <div class="input-group">
-                                                    <label class="col-sm-12 col-form-label">Hours Minutes unpaid break</label>
-                                                    <div class="col-md-12">
-                                                        <input type="text" name="leave_hours_minute_unpaid_break[]" placeholder="Hours minutes unpaid break">
-                                                    </div><!-- /.input-group -->
-                                            </div><!-- /.col-md-6 -->
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group row mb-0">
+                                                        <div class="input-group">
+                                                            <label class="col-sm-12 col-form-label">Type</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" name="leave_type[]" placeholder="Ex: Personal Leave, Etc">
+                                                            </div><!-- /.input-group -->
+                                                    </div><!-- /.col-md-6 -->
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group row mb-0">
+                                                        <div class="input-group">
+                                                            <label class="col-sm-12 col-form-label">Hours Minutes unpaid break</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" name="leave_hours_minute_unpaid_break[]" placeholder="Hours minutes unpaid break">
+                                                            </div><!-- /.input-group -->
+                                                    </div><!-- /.col-md-6 -->
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -382,20 +395,6 @@
                     $(cloneBox).find(".remove-day-div").removeClass('d-none');
 
                     $(cloneBox).insertAfter('#employee-timesheet-form .employee-timesheet-details:last');
-                    
-                    $('.timepicker').timepicker({
-                        timeFormat: 'h:mm p',
-                        interval: 15,
-                        dropdown: true,
-                        scrollbar: true
-                    });
-                });
-
-                $('.timepicker').timepicker({
-                    timeFormat: 'h:mm p',
-                    interval: 15,
-                    dropdown: true,
-                    scrollbar: true
                 });
                 
                 $("#employee-timesheet-form").validate({
@@ -419,9 +418,17 @@
                         // "overtime_restart_time[]" : "required",
                         // "overtime_finish_time[]" : "required",
                         // "overtime_total_break_time[]" : "required",
-                        "leave_type[]" : "required",
-                        "leave_hours_minute_unpaid_break[]" : "required",
+                        // "leave_type[]" : "required",
+                        // "leave_hours_minute_unpaid_break[]" : "required",
                     }
+                });
+
+                $(document).on('click','.overtime-btn',function(){
+                    $(this).closest('.overtime-leave-section').find('.overtime-block').toggle('slow');
+                });
+
+                $(document).on('click','.leave-btn',function(){
+                    $(this).closest('.overtime-leave-section').find('.leave-block').toggle('slow');
                 });
             });
         </script>
