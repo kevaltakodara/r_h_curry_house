@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\EmployeeTimeSheetSendMail;
 use App\Models\EmployeeTimeSheet;
 use App\Models\EmployeeTimeSheetDetail;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
@@ -17,7 +20,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -46,7 +49,6 @@ class HomeController extends Controller
             if($emp_time_sheet){
                 if(isset($data['day'])){
                     foreach($data['day'] as $key => $value){
-    
                         $tmp = [
                             'employee_time_sheet_id' => $emp_time_sheet,
                             'day' => $value,
@@ -65,14 +67,20 @@ class HomeController extends Controller
                             'leave_type' => $data['leave_type'][$key] ?? NULL,
                             'leave_hours_minute_unpaid_break' => $data['leave_hours_minute_unpaid_break'][$key] ?? NULL,
                         ];
-    
                         EmployeeTimeSheetDetail::create($tmp);
                     }
                 }
             }
+
+            if(isset($emp_time_sheet)){
+                Mail::send(new EmployeeTimeSheetSendMail($emp_time_sheet));
+            }
+            
+
             Session::flash('success', 'Data saved successfully.');
             return redirect()->route('frontend.index');
         }catch (Exception $e){
+            Log::info('Error => '. $e);
             Session::flash('error', 'Something went wrong try again.');
             return redirect()->back();
         }
