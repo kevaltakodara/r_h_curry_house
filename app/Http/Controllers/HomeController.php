@@ -82,7 +82,7 @@ class HomeController extends Controller
         }catch (Exception $e){
             Log::info('Error => '. $e);
             Session::flash('error', 'Something went wrong try again.');
-            return redirect()->back();
+            return redirect()->route('frontend.index');
         }
 
     }

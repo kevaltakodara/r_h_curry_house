@@ -38,7 +38,7 @@ class EmployeeTimeSheetSendMail extends Mailable
         $employee_timesheet = EmployeeTimeSheet::with('details')->where('id',$this->emp_time_sheet)->get();
         $this->employee_timesheet = $employee_timesheet;
 
-        return $this->to('kevaltakodara@gmail.com')->view('emails.employee-time-sheet-mail');
+        return $this->to("armidalerhcurryhouseau@gmail.com")->view('emails.employee-time-sheet-mail');
     }
 
     public function failed(Throwable $exception)
