@@ -217,7 +217,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group row mb-0">
                                                 <div class="input-group">
-                                                    <label class="col-sm-12 col-form-label">Total break time</label>
+                                                    <label class="col-sm-12 col-form-label">Total( Hours minus unpaid break )</label>
                                                     <div class="col-md-12">
                                                         <input type="text" class="timepicker" name="total_break_time[]" placeholder="Ex: 2:30">
                                                     </div><!-- /.input-group -->
@@ -288,7 +288,7 @@
                                                 <div class="col-md-4">
                                                     <div class="form-group row mb-0">
                                                         <div class="input-group">
-                                                            <label class="col-sm-12 col-form-label">Total break time</label>
+                                                            <label class="col-sm-12 col-form-label">Total( Hours minus unpaid break )</label>
                                                             <div class="col-md-12">
                                                                 <input type="text" class="timepicker" name="overtime_total_break_time[]" placeholder="Ex: 2:30pm">
                                                             </div><!-- /.input-group -->
@@ -319,7 +319,7 @@
                                                 <div class="col-md-4">
                                                     <div class="form-group row mb-0">
                                                         <div class="input-group">
-                                                            <label class="col-sm-12 col-form-label">Hours Minutes unpaid break</label>
+                                                            <label class="col-sm-12 col-form-label">Total( Hours minus unpaid break )</label>
                                                             <div class="col-md-12">
                                                                 <input type="text" name="leave_hours_minute_unpaid_break[]" placeholder="Hours minutes unpaid break">
                                                             </div><!-- /.input-group -->
