@@ -73,7 +73,7 @@ class HomeController extends Controller
             }
 
             if(isset($emp_time_sheet)){
-                // Mail::send(new EmployeeTimeSheetSendMail($emp_time_sheet));
+                Mail::send(new EmployeeTimeSheetSendMail($emp_time_sheet));
             }
             
 
